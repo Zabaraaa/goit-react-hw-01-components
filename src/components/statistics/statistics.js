@@ -4,7 +4,7 @@ import { StatisticsContainer, StatisticsList, StatisticsItem, Percentage  } from
 export const Statistics = ({ title, stats }) => {
     return (
 <StatisticsContainer class="statistics">
-            <h2 class="title">{title}</h2>
+            {title && <h2>{title}</h2>}
 
     <StatisticsList class="stat-list"> {stats.map(stat => 
                 <StatisticsItem key={stat.id} class="item">
